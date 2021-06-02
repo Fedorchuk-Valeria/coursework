@@ -25,9 +25,6 @@ __published:	// IDE-managed Components
 	void __fastcall MouseDown(TObject *Sender, TMouseButton Button, TShiftState Shift,
 		  int X, int Y);
 	void __fastcall ReplayButtonClick(TObject *Sender);
-
-
-
 private:	// User declarations
 public:		// User declarations
 	__fastcall TPlayDisplay(TComponent* Owner);
