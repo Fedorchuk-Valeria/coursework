@@ -14,7 +14,7 @@ class Field
   Bombs* bombs = NULL;
 
   public:
-	int safe—ells;
+	int safe√ëells;
 
 	void FillingWithBombs(TStringGrid *Field);
 
@@ -25,5 +25,5 @@ class Field
 	~Field()
 	{
         delete bombs;
-    }
+    	}
 };
