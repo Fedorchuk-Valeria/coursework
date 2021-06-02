@@ -1,5 +1,4 @@
 //---------------------------------------------------------------------------
-
 #include <vcl.h>
 #pragma hdrstop
 
@@ -45,17 +44,17 @@ void __fastcall TPlayDisplay::SelectCell(TObject *Sender, int ACol, int ARow, bo
 		Field->Canvas->FillRect(Rect);
         Field->Canvas->Font->Color = clBlack;
 		Field->Canvas->TextOut(Rect.Left, Rect.Top, Field->Cells[ACol][ARow]);
-		field.safeÑells--;
+		field.safeÃ‘ells--;
 	} else if(flag.flag == 1)
 	{
 	   TRect Rect = Field->CellRect(ACol, ARow);
 	   Field->Canvas->Brush->Color = clRed;
 	   Field->Canvas->FillRect(Rect);
 	}
-	if(field.safeÑells == 0)
+	if(field.safeÃ‘ells == 0)
 	{
         End->Left = 270;
-		End->Caption = "YOU WIN";
+	End->Caption = "YOU WIN";
     }
 }
 //---------------------------------------------------------------------------
@@ -69,7 +68,7 @@ void __fastcall TPlayDisplay::MouseDown(TObject *Sender, TMouseButton Button, TS
 	} else if(Button == mbRight)
 	{
 		flag.Release();
-    }
+    	}
 }
 //---------------------------------------------------------------------------
 
@@ -86,13 +85,12 @@ void __fastcall TPlayDisplay::ReplayButtonClick(TObject *Sender)
 			Field->Canvas->FillRect(Rect);
 		}
 	}
-    for(int j = 0; j < 21; j++)
+    	for(int j = 0; j < 21; j++)
 	{
         Field->Rows[j]->Clear();
 	}
 	field.FillingWithBombs(Field);
 	field.FillingWithNumbers(Field);
-    field.AmountOfSafeCells(Field);
+    	field.AmountOfSafeCells(Field);
 }
 //---------------------------------------------------------------------------
-
