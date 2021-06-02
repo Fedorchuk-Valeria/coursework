@@ -26,7 +26,13 @@ void __fastcall TPlayDisplay::SelectCell(TObject *Sender, int ACol, int ARow, bo
 {
 	if(Field->Cells[ACol][ARow] == "b" && flag.flag == 0)
 	{
+		for(int j = 0; j < 21; j++)
+		{
+			Field->Rows[j]->Clear();
+		}
+
 		Field->Canvas->Brush->Color = clRed;
+		
 		for(int i = 0; i < 21; i++)
 		{
 			for(int j = 0; j < 21; j++)
